@@ -1,5 +1,5 @@
 <template>
-  <quizzy-landing></quizzy-landing>
+  <router-view></router-view>
 </template>
 
 <script>

@@ -34,6 +34,7 @@ export default {
   methods: {
     uploadJson() {
       console.log("---Json is getting uploaded---");
+      this.$router.push('/uploadjson')
     },
     createQuiz() {
       console.log("---quiz created---");
