@@ -1,8 +1,20 @@
 import { createApp } from 'vue'
 import App from './App.vue';
+import { createRouter, createWebHistory } from 'vue-router';
 import './index.css';
 import QuizzyLanding from './components/QuizzyLanding';
-import router from './router'
+import QuizzesList from './components/QuizzesList';
+import UploadJson from './components/UploadJson';
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        { path: '/', component: QuizzyLanding },
+        { path: '/list', component: QuizzesList },
+        { path: '/uploadJson', component: UploadJson },
+    ],
+});
+
 
 const app = createApp(App);
 

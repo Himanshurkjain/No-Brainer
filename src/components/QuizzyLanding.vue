@@ -2,12 +2,14 @@
   <div class="flex flex-col items-center top-1/2">
     <div class="text-4xl my-2">Get Quizzy</div>
     <div class="my-1">
+      <router-link to="uploadJson">
       <button
         @click="uploadJson"
         class="rounded-none bg-gray-500/25 rounded py-2 px-5"
       >
         Upload JSON
       </button>
+    </router-link>
     </div>
     <div class="my-1">
       <button
@@ -18,12 +20,14 @@
       </button>
     </div>
     <div class="my-1">
-      <button
-        @click="getAllQuizzes"
-        class="rounded-none bg-gray-500/25 rounded py-2 px-5"
-      >
-        See all quizzes
-      </button>
+      <router-link to="list">
+        <button
+          @click="getAllQuizzes"
+          class="rounded-none bg-gray-500/25 rounded py-2 px-5"
+        >
+          See all quizzes
+        </button>
+    </router-link>
     </div>
   </div>
 </template>
