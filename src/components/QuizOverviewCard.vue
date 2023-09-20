@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-gray-300 w-5/6 h-24 pl-4 pt-2">
-        <div ><span class="text-xl">{{ card.quizName }}</span> | <span class="text-sm text-gray-500">{{ card.createdOn }}</span></div>
-        <div class="text-sm mb-2">{{ card.quizDescription }}</div>
-        <div class="text-sm">{{ card.numberOfQuestions }}</div>
+    <div class="bg-gray-300 w-5/6 h-28 pl-4 pt-2 pr-1">
+        <div ><span class="text-xl">{{ quizData.quizName }}</span> | <span class="text-sm text-gray-500">{{ quizData.createdOn }}</span></div>
+        <div class="text-sm mb-2">{{ quizData.quizDescription }}</div>
+        <div class="text-sm">{{ quizData.numberOfQuestions }}</div>
     </div>
 </template>
       
@@ -10,17 +10,15 @@
 export default {
     name: "QuizzesList",
     data: () => {
-        return {
-            card: {
-                quizName: "SalesForce Javascript Developer",
-                createdOn: "3 days ago",
-                quizDescription: "It includes javascript basics and lightening components.It includes javascript basics and lightening components.It includes javascript basics and lightening components.",
-                numberOfQuestions: "50 questions"
-            }
-        }
     },
     methods: {
     },
+    props: {
+        quizData: {
+            type: Object,
+            default: undefined,
+        },
+    }
 };
 </script>
 <style scoped></style>
