@@ -12,12 +12,14 @@
     </router-link>
     </div>
     <div class="my-1">
-      <button
-        @click="createQuiz"
-        class="rounded-none bg-gray-500/25 rounded py-2 px-5"
-      >
-        Build a quiz
-      </button>
+      <router-link to="buildQuiz">
+        <button
+          @click="createQuiz"
+          class="rounded-none bg-gray-500/25 rounded py-2 px-5"
+        >
+          Build a quiz
+        </button>
+    </router-link>
     </div>
     <div class="my-1">
       <router-link to="list">
